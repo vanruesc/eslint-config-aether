@@ -12,8 +12,9 @@ module.exports = {
 
 	"parserOptions": {
 
-		"ecmaVersion": 8,
-		"sourceType": "module"
+		"ecmaVersion": 10,
+		"sourceType": "module",
+		"impliedStrict": true
 
 	},
 
@@ -26,7 +27,7 @@ module.exports = {
 			"allowSingleLine": true
 		}],
 
-		"camelcase": "error",
+		"camelcase": "warn",
 		"comma-dangle": ["error", "never"],
 		"comma-spacing": "error",
 		"comma-style": ["error", "last"],
@@ -59,10 +60,10 @@ module.exports = {
 		"new-parens": "error",
 
 		"no-array-constructor": "error",
-		"no-alert": "error",
+		"no-alert": "warn",
 		"no-caller": "error",
 		"no-console": "off",
-		"no-debugger": "off",
+		"no-debugger": "warn",
 		"no-else-return": "error",
 		"no-extend-native": "error",
 		"no-extra-bind": "error",
@@ -91,7 +92,11 @@ module.exports = {
 		"no-whitespace-before-property": "error",
 
 		"object-curly-spacing": ["error", "always"],
-		"padded-blocks": ["error", "always"],
+
+		"padded-blocks": ["error", "always", {
+			"allowSingleLineBlocks": true
+		}],
+
 		"quotes": ["error", "double"],
 
 		"semi": ["error", "always"],
@@ -103,7 +108,7 @@ module.exports = {
 		"space-unary-ops": "error",
 		"spaced-comment": ["warn", "always"],
 
-		"wrap-iife": "error",
+		"wrap-iife": "warn",
 		"yoda": ["error", "never"]
 
 	}
