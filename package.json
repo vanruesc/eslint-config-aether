@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-delta",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A custom code style for ESLint.",
 	"homepage": "https://github.com/vanruesc/eslint-config-delta",
 	"main": "index.js",
