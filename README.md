@@ -1,6 +1,6 @@
 # Eslint Config Delta
 
-[![npm version](https://badge.fury.io/js/eslint-config-delta.svg)](http://badge.fury.io/js/eslint-config-delta)
+[![npm version](https://badgen.net/npm/v/eslint-config-delta?color=green)](https://www.npmjs.com/package/eslint-config-delta
 
 A custom code style for [ESLint](https://eslint.org/).
 
