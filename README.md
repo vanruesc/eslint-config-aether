@@ -1,6 +1,6 @@
-# Eslint Config Delta
+# Eslint Config Aether
 
-[![npm version](https://badgen.net/npm/v/eslint-config-delta?color=green)](https://www.npmjs.com/package/eslint-config-delta)
+[![npm version](https://badgen.net/npm/v/eslint-config-aether?color=green)](https://www.npmjs.com/package/eslint-config-aether)
 
 A custom code style for [ESLint](https://eslint.org/).
 
@@ -8,7 +8,7 @@ A custom code style for [ESLint](https://eslint.org/).
 ## Installation
 
 ```sh
-npm install eslint-config-delta --save-dev
+npm install eslint-config-aether
 ``` 
 
 
@@ -21,7 +21,7 @@ Choose one of the following options to load the configuration.
 ```js
 {
 	"eslintConfig": {
-		"extends": "delta"
+		"extends": "aether"
 	}
 }
 ```
@@ -30,6 +30,6 @@ Choose one of the following options to load the configuration.
 
 ```js
 {
-	"extends": "delta"
+	"extends": "aether"
 }
 ```
