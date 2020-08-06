@@ -8,11 +8,14 @@
 	"keywords": [
 		"code",
 		"style",
+		"syntax",
+		"checking",
 		"eslint",
 		"config",
 		"lint",
 		"hint",
-		"jscs"
+		"typescript",
+		"ts"
 	],
 	"author": {
 		"name": "Raoul van Rüschen",
@@ -26,6 +29,8 @@
 		"url": "https://github.com/vanruesc/eslint-config-aether/issues"
 	},
 	"files": [
-		"index.js"
+		"index.js",
+		"typescript.js",
+		"typescript-basic.js"
 	]
 }
