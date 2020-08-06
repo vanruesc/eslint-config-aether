@@ -29,6 +29,7 @@
 		"url": "https://github.com/vanruesc/eslint-config-aether/issues"
 	},
 	"files": [
+		"default.js",
 		"index.js",
 		"typescript.js",
 		"typescript-basic.js"
