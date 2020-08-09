@@ -4,6 +4,31 @@
 
 A custom code style for [ESLint](https://eslint.org/).
 
+## Preview
+
+```js
+const btn = document.getElementById("btn");
+let count = 0;
+
+function render() {
+
+	btn.innerText = `Count: ${count}`;
+
+}
+
+btn.addEventListener("click", () => {
+
+	// Count from 1 to 10.
+	if(count < 10) {
+
+		count += 1;
+		render();
+
+	}
+
+});
+```
+
 
 ## Installation
 
@@ -11,24 +36,29 @@ A custom code style for [ESLint](https://eslint.org/).
 npm install eslint-config-aether
 ``` 
 
-This package includes optional TypeScript variants that rely on the TypeScript ESLint [plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) and [parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser):
+This package includes optional configurations for TypeScript which require the TypeScript ESLint [plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) and [parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser):
 
 ```sh
-npm install @typescript-eslint/eslint-plugin @typescript-eslint/parser
+npm install @typescript-eslint/eslint-plugin
+npm install @typescript-eslint/parser
 ```
 
 ## Included Configurations
 
-| Config                  | Parent Configs                                                                   |
-|-------------------------|----------------------------------------------------------------------------------|
-| aether                  | `eslint:recommended`                                                             |
-| aether/typescript       | `aether`, `plugin:@typescript-eslint/eslint-recommended-requiring-type-checking` |
-| aether/typescript-basic | `aether`, `plugin:@typescript-eslint/eslint-recommended`                         |
+The `aether` configuration is intended to be used for JavaScript projects, `aether/typescript-basic` is a compatibility configuration for TypeScript projects and `aether/typescript` adds rules that are based on type information.
+
+| Config                    | Parent Configs                                                                   |
+|---------------------------|----------------------------------------------------------------------------------|
+| `aether`                  | `eslint:recommended`                                                             |
+| `aether/typescript`       | `aether`, `plugin:@typescript-eslint/eslint-recommended-requiring-type-checking` |
+| `aether/typescript-basic` | `aether`, `plugin:@typescript-eslint/eslint-recommended`                         |
 
 
 ## Usage
 
 Choose one of the following options to load a configuration.
+
+### JavaScript
 
 #### package.json
 
@@ -40,7 +70,17 @@ Choose one of the following options to load a configuration.
 }
 ```
 
-#### package.json (TypeScript)
+#### .eslintrc
+
+```json
+{
+	"extends": "aether"
+}
+```
+
+### TypeScript
+
+#### package.json
 
 ```json
 {
@@ -56,14 +96,6 @@ Choose one of the following options to load a configuration.
 ```
 
 #### .eslintrc
-
-```json
-{
-	"extends": "aether"
-}
-```
-
-#### .eslintrc (TypeScript)
 
 ```json
 {
