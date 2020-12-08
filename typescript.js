@@ -10,7 +10,12 @@ module.exports = {
 
 	"rules": {
 
+		"indent": "off",
 		"no-unused-vars": "off",
+
+		"@typescript-eslint/indent": ["error", "tab", {
+			"SwitchCase": 1
+		}],
 
 		"@typescript-eslint/no-empty-function": "off",
 		"@typescript-eslint/no-unused-vars": ["warn", {
