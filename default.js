@@ -4,7 +4,7 @@ module.exports = {
 
 	"env": {
 
-		"es2020": true,
+		"es2021": true,
 		"browser": true,
 		"worker": true,
 		"jquery": true,
