@@ -3,6 +3,12 @@ module.exports = {
 	"plugins": ["@typescript-eslint"],
 	"parser": "@typescript-eslint/parser",
 
+	"parserOptions": {
+		"project": [
+			"tsconfig.json"
+		]
+	},
+
 	"extends": [
 		"aether/default",
 		"plugin:@typescript-eslint/recommended-requiring-type-checking"
