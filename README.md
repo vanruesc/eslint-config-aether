@@ -58,7 +58,8 @@ The `aether` configuration is intended to be used for JavaScript projects, `aeth
 
 Choose one of the following options to load a configuration.
 
-### JavaScript
+<details><summary>JavaScript</summary>
+<p>
 
 #### package.json
 
@@ -78,7 +79,13 @@ Choose one of the following options to load a configuration.
 }
 ```
 
-### TypeScript
+</p>
+</details>
+
+<details><summary>TypeScript</summary>
+<p>
+
+Note: `aether/typescript` sets `parserOptions.project` to `"tsconfig.json"` by default.
 
 #### package.json
 
@@ -107,3 +114,6 @@ Choose one of the following options to load a configuration.
 	}
 }
 ```
+
+</p>
+</details>
