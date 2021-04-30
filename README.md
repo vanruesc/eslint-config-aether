@@ -56,17 +56,14 @@ The `aether` configuration is intended to be used for JavaScript projects, `aeth
 
 ## Usage
 
-Choose one of the following options to load a configuration.
-
-<details><summary>JavaScript</summary>
-<p>
+Note: The config `aether/typescript` sets `parserOptions.project` to `"tsconfig.json"` by default.
 
 #### package.json
 
 ```json
 {
 	"eslintConfig": {
-		"extends": "aether"
+		"extends": "aether/typescript"
 	}
 }
 ```
@@ -75,45 +72,6 @@ Choose one of the following options to load a configuration.
 
 ```json
 {
-	"extends": "aether"
+	"extends": "aether/typescript"
 }
 ```
-
-</p>
-</details>
-
-<details><summary>TypeScript</summary>
-<p>
-
-Note: `aether/typescript` sets `parserOptions.project` to `"tsconfig.json"` by default.
-
-#### package.json
-
-```json
-{
-	"eslintConfig": {
-		"extends": "aether/typescript",
-		"parserOptions": {
-			"project": [
-				"tsconfig.json"
-			]
-		}
-	}
-}
-```
-
-#### .eslintrc
-
-```json
-{
-	"extends": "aether/typescript",
-	"parserOptions": {
-		"project": [
-			"tsconfig.json"
-		]
-	}
-}
-```
-
-</p>
-</details>
