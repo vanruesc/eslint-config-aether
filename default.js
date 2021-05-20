@@ -56,7 +56,10 @@ module.exports = {
 			}
 		}],
 
-		"lines-between-class-members": ["error", "always"],
+		"lines-between-class-members": ["warn", "always", {
+			"exceptAfterSingleLine": true
+		}],
+
 		"new-cap": "error",
 		"new-parens": "error",
 
