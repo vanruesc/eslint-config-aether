@@ -49,6 +49,10 @@ module.exports = {
 				"format": null
 			},
 			{
+				"selector": "enumMember",
+				"format": ["UPPER_CASE"]
+			},
+			{
 				"selector": "typeLike",
 				"format": ["PascalCase"]
 			}
