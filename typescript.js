@@ -1,71 +1,45 @@
-module.exports = {
+module.exports = require("./typescript-basic.js");
 
-	"plugins": ["@typescript-eslint"],
-	"parser": "@typescript-eslint/parser",
+module.exports.extends.push(
+	"plugin:@typescript-eslint/recommended-requiring-type-checking"
+);
 
-	"parserOptions": {
-		"project": [
-			"tsconfig.json"
-		]
-	},
+Object.assign(module.exports.rules, {
 
-	"extends": [
-		"aether/default",
-		"plugin:@typescript-eslint/recommended",
-		"plugin:@typescript-eslint/recommended-requiring-type-checking"
-	],
+	"camelcase": "off",
 
-	"rules": {
+	"@typescript-eslint/naming-convention": ["error",
+		{
+			"selector": "default",
+			"format": ["camelCase"]
+		},
+		{
+			"selector": "variable",
+			"format": ["camelCase", "UPPER_CASE"]
+		},
+		{
+			"selector": "parameter",
+			"format": ["camelCase"],
+			"leadingUnderscore": "allow"
+		},
+		{
+			"selector": "memberLike",
+			"modifiers": ["private"],
+			"format": ["camelCase"],
+			"leadingUnderscore": "forbid"
+		},
+		{
+			"selector": ["objectLiteralProperty", "objectLiteralMethod"],
+			"format": null
+		},
+		{
+			"selector": "enumMember",
+			"format": ["UPPER_CASE"]
+		},
+		{
+			"selector": "typeLike",
+			"format": ["PascalCase"]
+		}
+	]
 
-		"indent": "off",
-		"camelcase": "off",
-		"no-undef": "off",
-		"no-unused-vars": "off",
-
-		"@typescript-eslint/indent": ["error", "tab", {
-			"SwitchCase": 1
-		}],
-
-		"@typescript-eslint/naming-convention": ["error",
-			{
-				"selector": "default",
-				"format": ["camelCase"]
-			},
-			{
-				"selector": "variable",
-				"format": ["camelCase", "UPPER_CASE"]
-			},
-			{
-				"selector": "parameter",
-				"format": ["camelCase"],
-				"leadingUnderscore": "allow"
-			},
-			{
-				"selector": "memberLike",
-				"modifiers": ["private"],
-				"format": ["camelCase"],
-				"leadingUnderscore": "forbid"
-			},
-			{
-				"selector": ["objectLiteralProperty", "objectLiteralMethod"],
-				"format": null
-			},
-			{
-				"selector": "enumMember",
-				"format": ["UPPER_CASE"]
-			},
-			{
-				"selector": "typeLike",
-				"format": ["PascalCase"]
-			}
-		],
-
-		"@typescript-eslint/no-empty-function": "off",
-		"@typescript-eslint/no-unused-vars": ["warn", {
-			"vars": "all",
-			"args": "none"
-		}]
-
-	}
-
-};
+});
