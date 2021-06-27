@@ -11,6 +11,7 @@ module.exports = {
 
 	"extends": [
 		"aether/default",
+		"plugin:@typescript-eslint/recommended",
 		"plugin:@typescript-eslint/recommended-requiring-type-checking"
 	],
 
@@ -18,6 +19,7 @@ module.exports = {
 
 		"indent": "off",
 		"camelcase": "off",
+		"no-undef": "off",
 		"no-unused-vars": "off",
 
 		"@typescript-eslint/indent": ["error", "tab", {
