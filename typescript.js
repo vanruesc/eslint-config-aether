@@ -23,6 +23,16 @@ Object.assign(module.exports.rules, {
 			"leadingUnderscore": "allow"
 		},
 		{
+			"selector": "accessor",
+			"modifiers": ["static"],
+			"format": ["camelCase", "UPPER_CASE"]
+		},
+		{
+			"selector": "classProperty",
+			"modifiers": ["static", "readonly"],
+			"format": ["camelCase", "UPPER_CASE"]
+		},
+		{
 			"selector": "memberLike",
 			"modifiers": ["private"],
 			"format": ["camelCase"],
