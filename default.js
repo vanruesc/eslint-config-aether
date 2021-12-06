@@ -62,7 +62,8 @@ module.exports = {
 
 		"max-len": ["warn", {
 			"code": 120,
-			"tabWidth": 2
+			"tabWidth": 2,
+			"ignoreComments": true
 		}],
 
 		"new-cap": "error",
