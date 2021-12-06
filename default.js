@@ -60,6 +60,11 @@ module.exports = {
 			"exceptAfterSingleLine": true
 		}],
 
+		"max-len": ["warn", {
+			"code": 120,
+			"tabWidth": 2
+		}],
+
 		"new-cap": "error",
 		"new-parens": "error",
 
