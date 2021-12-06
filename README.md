@@ -45,7 +45,7 @@ npm install @typescript-eslint/parser
 
 ## Included Configurations
 
-The `aether` configuration is intended to be used for JavaScript projects, `aether/typescript-basic` is a compatibility configuration for TypeScript projects and `aether/typescript` adds rules that are based on type information.
+The `aether` configuration is intended to be used for JavaScript projects, `aether/typescript-basic` is a compatibility configuration for TypeScript projects and `aether/typescript` adds rules that rely on type checking.
 
 | Config                    | Parent Configs                                                                   |
 |---------------------------|----------------------------------------------------------------------------------|
