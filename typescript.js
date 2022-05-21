@@ -5,9 +5,7 @@ module.exports.extends.push(
 );
 
 Object.assign(module.exports.rules, {
-
 	"camelcase": "off",
-
 	"@typescript-eslint/naming-convention": ["error",
 		{
 			"selector": "default",
@@ -51,5 +49,4 @@ Object.assign(module.exports.rules, {
 			"format": ["PascalCase"]
 		}
 	]
-
 });

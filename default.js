@@ -1,33 +1,22 @@
 module.exports = {
-
 	"extends": "eslint:recommended",
-
 	"env": {
-
 		"es2022": true,
 		"browser": true,
 		"worker": true,
 		"jquery": true,
 		"node": true
-
 	},
-
 	"parserOptions": {
-
 		"sourceType": "module",
 		"impliedStrict": true
-
 	},
-
 	"rules": {
-
 		"array-bracket-spacing": ["error", "never"],
 		"block-spacing": ["error", "always"],
-
 		"brace-style": ["error", "1tbs", {
 			"allowSingleLine": true
 		}],
-
 		"camelcase": "warn",
 		"comma-dangle": ["error", "never"],
 		"comma-spacing": "error",
@@ -39,13 +28,10 @@ module.exports = {
 		"eol-last": ["error", "always"],
 		"eqeqeq": "error",
 		"func-call-spacing": ["error", "never"],
-
 		"indent": ["error", "tab", {
 			"SwitchCase": 1
 		}],
-
 		"key-spacing": "error",
-
 		"keyword-spacing": ["error", {
 			"overrides": {
 				"catch": { "after": false },
@@ -55,20 +41,16 @@ module.exports = {
 				"while": { "after": false },
 			}
 		}],
-
 		"lines-between-class-members": ["warn", "always", {
 			"exceptAfterSingleLine": true
 		}],
-
 		"max-len": ["warn", {
 			"code": 120,
 			"tabWidth": 2,
 			"ignoreComments": true
 		}],
-
 		"new-cap": "error",
 		"new-parens": "error",
-
 		"no-array-constructor": "error",
 		"no-alert": "warn",
 		"no-caller": "error",
@@ -91,24 +73,20 @@ module.exports = {
 		"no-new-wrappers": "error",
 		"no-trailing-spaces": "warn",
 		"no-undef-init": "error",
-		"no-underscore-dangle": "error",
-
+		"no-underscore-dangle": ["error", {
+			"allowAfterThis": true
+		}],
 		"no-unused-vars": ["warn", {
 			"vars": "all",
 			"args": "none"
 		}],
-
 		"no-var": "error",
 		"no-whitespace-before-property": "error",
-
 		"object-curly-spacing": ["error", "always"],
-
 		"padded-blocks": ["error", "always", {
 			"allowSingleLineBlocks": true
 		}],
-
 		"quotes": ["error", "double"],
-
 		"semi": ["error", "always"],
 		"semi-spacing": "error",
 		"space-before-blocks": ["error", "always"],
@@ -117,10 +95,7 @@ module.exports = {
 		"space-infix-ops": "error",
 		"space-unary-ops": "error",
 		"spaced-comment": ["warn", "always"],
-
 		"wrap-iife": "warn",
 		"yoda": ["error", "never"]
-
 	}
-
 };
