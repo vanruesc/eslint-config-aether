@@ -6,47 +6,46 @@ module.exports.extends.push(
 
 Object.assign(module.exports.rules, {
 	"camelcase": "off",
+	"no-underscore-dangle": "off",
 	"@typescript-eslint/naming-convention": ["error",
 		{
 			"selector": "default",
 			"format": ["camelCase"]
 		},
 		{
-			"selector": "variable",
+			"selector": ["variable", "accessor"],
 			"format": ["camelCase", "UPPER_CASE"]
 		},
 		{
-			"selector": "parameter",
+			"selector": ["parameter", "property"],
 			"format": ["camelCase"],
 			"leadingUnderscore": "allow"
 		},
 		{
-			"selector": "accessor",
-			"modifiers": ["static"],
-			"format": ["camelCase", "UPPER_CASE"]
-		},
-		{
 			"selector": "classProperty",
 			"modifiers": ["static", "readonly"],
-			"format": ["camelCase", "UPPER_CASE"]
-		},
-		{
-			"selector": "memberLike",
-			"modifiers": ["private"],
-			"format": ["camelCase"],
+			"format": ["PascalCase", "UPPER_CASE"],
 			"leadingUnderscore": "forbid"
 		},
 		{
-			"selector": ["objectLiteralProperty", "objectLiteralMethod"],
-			"format": null
+			selector: "typeLike",
+			format: ["PascalCase"]
 		},
 		{
 			"selector": "enumMember",
 			"format": ["UPPER_CASE"]
 		},
 		{
-			"selector": "typeLike",
-			"format": ["PascalCase"]
+			"selector": ["objectLiteralProperty", "objectLiteralMethod"],
+			"format": null
+		},
+		{
+			selector: "interface",
+			format: ["PascalCase"],
+			custom: {
+				regex: "^I[A-Z]",
+				match: false
+			}
 		}
 	]
 });
