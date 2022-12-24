@@ -24,7 +24,7 @@ Object.assign(module.exports.rules, {
 		{
 			"selector": "classProperty",
 			"modifiers": ["static", "readonly"],
-			"format": ["PascalCase", "UPPER_CASE"],
+			"format": ["camelCase", "PascalCase", "UPPER_CASE"],
 			"leadingUnderscore": "forbid"
 		},
 		{
