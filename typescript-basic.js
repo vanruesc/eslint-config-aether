@@ -14,7 +14,6 @@ module.exports = {
 		"indent": "off",
 		"no-undef": "off",
 		"no-unused-vars": "off",
-		"strict-boolean-expressions": "error",
 		"@typescript-eslint/indent": ["error", "tab", {
 			"SwitchCase": 1
 		}],
@@ -22,6 +21,7 @@ module.exports = {
 		"@typescript-eslint/no-unused-vars": ["warn", {
 			"vars": "all",
 			"args": "none"
-		}]
+		}],
+		"@typescript-eslint/strict-boolean-expressions": "warn"
 	}
 };
