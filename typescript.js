@@ -13,6 +13,10 @@ Object.assign(module.exports.rules, {
 			"format": ["camelCase"]
 		},
 		{
+			"selector": ["import"],
+			"format": ["camelCase", "PascalCase"]
+		},
+		{
 			"selector": ["variable", "accessor"],
 			"format": ["camelCase", "UPPER_CASE"]
 		},
@@ -28,8 +32,8 @@ Object.assign(module.exports.rules, {
 			"leadingUnderscore": "forbid"
 		},
 		{
-			selector: "typeLike",
-			format: ["PascalCase"]
+			"selector": "typeLike",
+			"format": ["PascalCase"]
 		},
 		{
 			"selector": "enumMember",
@@ -40,11 +44,11 @@ Object.assign(module.exports.rules, {
 			"format": null
 		},
 		{
-			selector: "interface",
-			format: ["PascalCase"],
-			custom: {
-				regex: "^I[A-Z]",
-				match: false
+			"selector": "interface",
+			"format": ["PascalCase"],
+			"custom": {
+				"regex": "^I[A-Z]",
+				"match": false
 			}
 		}
 	]
