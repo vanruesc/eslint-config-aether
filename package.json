@@ -22,8 +22,7 @@
 		"email": "vanruesc@outlook.de"
 	},
 	"repository": {
-		"type": "git",
-		"url": "https://github.com/vanruesc/eslint-config-aether.git"
+		"url": "git+https://github.com/vanruesc/eslint-config-aether.git"
 	},
 	"bugs": {
 		"url": "https://github.com/vanruesc/eslint-config-aether/issues"
@@ -33,5 +32,6 @@
 		"index.js",
 		"typescript.js",
 		"typescript-basic.js"
-	]
+	],
+	"scripts": {}
 }
