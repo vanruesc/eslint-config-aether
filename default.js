@@ -1,7 +1,7 @@
 module.exports = {
 	"extends": "eslint:recommended",
 	"env": {
-		"es2022": true,
+		"es2024": true,
 		"browser": true,
 		"worker": true,
 		"jquery": true,
@@ -24,7 +24,7 @@ module.exports = {
 		"consistent-return": "error",
 		"computed-property-spacing": ["error", "never"],
 		"curly": "error",
-		"dot-notation": "error",
+		"dot-notation": "warn",
 		"eol-last": ["error", "always"],
 		"eqeqeq": "error",
 		"func-call-spacing": ["error", "never"],
@@ -83,7 +83,7 @@ module.exports = {
 		"no-var": "error",
 		"no-whitespace-before-property": "error",
 		"object-curly-spacing": ["error", "always"],
-		"padded-blocks": ["error", "always", {
+		"padded-blocks": ["warn", "always", {
 			"allowSingleLineBlocks": true
 		}],
 		"quotes": ["error", "double"],
