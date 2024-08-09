@@ -7,7 +7,7 @@ module.exports.extends.push(
 Object.assign(module.exports.rules, {
 	"camelcase": "off",
 	"no-underscore-dangle": "off",
-	"@typescript-eslint/naming-convention": ["error",
+	"@typescript-eslint/naming-convention": ["warn",
 		{
 			"selector": "default",
 			"format": ["camelCase"]
