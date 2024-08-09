@@ -17,7 +17,7 @@ module.exports = {
 		"brace-style": ["warn", "1tbs", {
 			"allowSingleLine": true
 		}],
-		"camelcase": "warn",
+		"camelcase": "never",
 		"comma-dangle": ["warn", "never"],
 		"comma-spacing": "warn",
 		"comma-style": ["warn", "last"],
