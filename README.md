@@ -29,49 +29,17 @@ btn.addEventListener("click", () => {
 });
 ```
 
-
 ## Installation
 
 ```sh
 npm install eslint-config-aether
 ``` 
 
-This package includes optional configurations for TypeScript which require the TypeScript ESLint [plugin](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin) and [parser](https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/parser):
-
-```sh
-npm install @typescript-eslint/eslint-plugin
-npm install @typescript-eslint/parser
-```
-
-## Included Configurations
-
-The `aether` configuration is intended to be used for JavaScript projects, `aether/typescript-basic` is a compatibility configuration for TypeScript projects and `aether/typescript` adds rules that rely on type checking.
-
-| Config                    | Parent Configs                                                                   |
-|---------------------------|----------------------------------------------------------------------------------|
-| `aether`                  | `eslint:recommended`                                                             |
-| `aether/typescript`       | `aether`, `plugin:@typescript-eslint/eslint-recommended-requiring-type-checking` |
-| `aether/typescript-basic` | `aether`, `plugin:@typescript-eslint/eslint-recommended`                         |
-
-
 ## Usage
 
-Note: The config `aether/typescript` sets `parserOptions.project` to `"tsconfig.json"` by default.
+#### eslint.config.js
 
-#### package.json
-
-```json
-{
-	"eslintConfig": {
-		"extends": "aether/typescript"
-	}
-}
-```
-
-#### .eslintrc
-
-```json
-{
-	"extends": "aether/typescript"
-}
+```js
+import aether from "eslint-plugin-aether";
+export default [...aether];
 ```
