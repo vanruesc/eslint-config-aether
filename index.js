@@ -1,1 +1,7 @@
-module.exports = require("./default.js");
+import defaultConfig from "./default.js";
+import tsConfig from "./typescript.js";
+
+export default [
+	defaultConfig,
+	tsConfig
+];

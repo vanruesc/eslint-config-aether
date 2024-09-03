@@ -1,17 +1,22 @@
-module.exports = {
-	"extends": "eslint:recommended",
-	"env": {
-		"es2024": true,
-		"browser": true,
-		"worker": true,
-		"jquery": true,
-		"node": true
-	},
-	"parserOptions": {
-		"sourceType": "module",
-		"impliedStrict": true
+import js from "@eslint/js";
+import globals from "globals";
+
+export default {
+	"files": [
+		"**/*.js",
+		"**/*.ts",
+	],
+	"languageOptions": {
+		"globals": {
+			...globals.browser,
+			...globals.es2025,
+			...globals.jquery,
+			...globals.node,
+			...globals.worker
+		}
 	},
 	"rules": {
+		...js.configs.recommended.rules,
 		"array-bracket-spacing": ["warn", "never"],
 		"block-spacing": ["warn", "always"],
 		"brace-style": ["warn", "1tbs", {
