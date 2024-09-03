@@ -40,6 +40,6 @@ npm install eslint-config-aether
 #### eslint.config.js
 
 ```js
-import aether from "eslint-plugin-aether";
+import aether from "eslint-config-aether";
 export default [...aether];
 ```
