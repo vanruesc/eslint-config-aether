@@ -3,17 +3,23 @@
 	"version": "1.5.3",
 	"description": "A custom code style for ESLint.",
 	"homepage": "https://github.com/vanruesc/eslint-config-aether",
-	"main": "index.js",
+	"main": "./index.js",
 	"license": "Zlib",
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./index.d.ts",
+			"default": "./index.js"
+		}
+	},
 	"keywords": [
-		"code",
-		"style",
-		"syntax",
-		"checking",
 		"eslint",
-		"config",
+		"eslintconfig",
 		"lint",
 		"hint",
+		"style",
+		"syntax",
+		"check",
 		"typescript",
 		"ts"
 	],
@@ -30,8 +36,17 @@
 	"files": [
 		"default.js",
 		"index.js",
-		"typescript.js",
-		"typescript-basic.js"
+		"index.d.ts",
+		"typescript.js"
 	],
-	"scripts": {}
+	"scripts": {},
+	"peerDependencies": {
+		"eslint": "9.x.x"
+	},
+	"dependencies": {
+		"@typescript-eslint/eslint-plugin": "8.x.x",
+		"@typescript-eslint/parser": "8.x.x",
+		"@stylistic/eslint-plugin": "2.x.x",
+		"globals": "15.x.x"
+	}
 }
