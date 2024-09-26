@@ -1,0 +1,11 @@
+{
+	"include": ["./test"],
+	"compilerOptions": {
+		"baseUrl": ".",
+		"moduleResolution": "node",
+		"module": "ESNext",
+		"target": "ESNext",
+		"strict": true,
+		"allowJs": true
+	}
+}

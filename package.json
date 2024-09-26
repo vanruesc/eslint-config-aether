@@ -39,7 +39,14 @@
 		"index.d.ts",
 		"typescript.js"
 	],
-	"scripts": {},
+	"scripts": {
+		"debug:js": "eslint --debug -c index.js test/test.js",
+		"debug:ts": "eslint --debug -c index.js test/test.ts",
+		"test": "run-p test:*",
+		"test:js": "eslint -c index.js test/test.js",
+		"test:ts": "eslint -c index.js test/test.ts",
+		"prepublishOnly": "npm test"
+	},
 	"peerDependencies": {
 		"eslint": "9.x.x"
 	},
@@ -48,5 +55,8 @@
 		"@typescript-eslint/parser": "8.x.x",
 		"@stylistic/eslint-plugin": "2.x.x",
 		"globals": "15.x.x"
+	},
+	"devDependencies": {
+		"npm-run-all": "4.x.x"
 	}
 }
