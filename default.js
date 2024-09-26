@@ -1,11 +1,15 @@
 import js from "@eslint/js";
 import globals from "globals";
+import stylistic from "@stylistic/eslint-plugin";
 
 export default {
 	"files": [
 		"**/*.js",
 		"**/*.ts",
 	],
+	"plugins": {
+		"@stylistic": stylistic,
+	},
 	"languageOptions": {
 		"globals": {
 			...globals.browser,
@@ -33,9 +37,6 @@ export default {
 		"eol-last": ["warn", "always"],
 		"eqeqeq": "error",
 		"func-call-spacing": ["warn", "never"],
-		"indent": ["warn", "tab", {
-			"SwitchCase": 1
-		}],
 		"key-spacing": "warn",
 		"keyword-spacing": ["warn", {
 			"overrides": {
@@ -92,7 +93,6 @@ export default {
 			"allowSingleLineBlocks": true
 		}],
 		"quotes": ["warn", "double"],
-		"semi": ["warn", "always"],
 		"semi-spacing": "warn",
 		"space-before-blocks": ["warn", "always"],
 		"space-before-function-paren": ["warn", "never"],
@@ -101,6 +101,10 @@ export default {
 		"space-unary-ops": "warn",
 		"spaced-comment": ["warn", "always"],
 		"wrap-iife": "warn",
-		"yoda": ["warn", "never"]
+		"yoda": ["warn", "never"],
+		"@stylistic/indent": ["warn", "tab", {
+			"SwitchCase": 1
+		}],
+		'@stylistic/semi': ['error', 'always']
 	}
 };

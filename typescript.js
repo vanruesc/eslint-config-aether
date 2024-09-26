@@ -1,14 +1,12 @@
 import tsParser from "@typescript-eslint/parser";
 import ts from "@typescript-eslint/eslint-plugin";
-import stylistic from "@stylistic/eslint-plugin";
 
 export default {
 	"files": [
 		"**/*.ts",
 	],
-	"plugins": { 
-		"@typescript-eslint": ts,
-		"@stylistic": stylistic,
+	"plugins": {
+		"@typescript-eslint": ts
 	},
 	"languageOptions": {
 		"parser": tsParser,
@@ -24,9 +22,6 @@ export default {
 		"no-undef": "off",
 		"no-underscore-dangle": "off",
 		"no-unused-vars": "off",
-		"@stylistic/indent": ["warn", "tab", {
-			"SwitchCase": 1
-		}],
 		"@typescript-eslint/no-empty-function": "off",
 		"@typescript-eslint/no-unused-vars": ["warn", {
 			"vars": "all",
