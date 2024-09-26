@@ -11,8 +11,20 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
+    steps:
       - name: Git checkout
         uses: actions/checkout@v4
+      - name: Install PNPM
+        uses: pnpm/action-setup@v4
+        with:
+          version: 9
+      - name: Install Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: "pnpm"
+      - name: Install dependencies and test
+        run: pnpm install-test --frozen-lockfile
       - name: Publish
         id: publish
         uses: JS-DevTools/npm-publish@v3
