@@ -17,15 +17,14 @@ export default {
 	"rules": {
 		...ts.configs["recommended-requiring-type-checking"].rules,
 		...ts.configs["stylistic-type-checked"].rules,
-		"camelcase": "off",
-		"indent": "off",
 		"no-undef": "off",
 		"no-underscore-dangle": "off",
 		"no-unused-vars": "off",
 		"@typescript-eslint/no-empty-function": "off",
 		"@typescript-eslint/no-unused-vars": ["warn", {
 			"vars": "all",
-			"args": "none"
+			"args": "none",
+			"caughtErrors": "none"
 		}],
 		"@typescript-eslint/prefer-optional-chain": "off",
 		"@typescript-eslint/strict-boolean-expressions": "error",
