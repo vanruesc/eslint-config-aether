@@ -66,7 +66,7 @@ export default {
 		"@stylistic/comma-style": ["warn", "last"],
 		"@stylistic/computed-property-spacing": ["warn", "never"],
 		"@stylistic/eol-last": ["warn", "always"],
-		"@stylistic/func-call-spacing": ["warn", "never"],
+		"@stylistic/function-call-spacing": ["warn", "never"],
 		"@stylistic/indent": ["warn", "tab", {
 			"SwitchCase": 1
 		}],
