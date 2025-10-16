@@ -3,8 +3,8 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"moduleResolution": "node",
-		"module": "ESNext",
-		"target": "ESNext",
+		"module": "esnext",
+		"target": "esnext",
 		"strict": true,
 		"allowJs": true
 	}
