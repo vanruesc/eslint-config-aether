@@ -20,6 +20,7 @@ export default {
 		"no-undef": "off",
 		"no-underscore-dangle": "off",
 		"no-unused-vars": "off",
+		"@typescript-eslint/dot-notation": "warn",
 		"@typescript-eslint/no-empty-function": "off",
 		"@typescript-eslint/no-unused-vars": ["warn", {
 			"vars": "all",

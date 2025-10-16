@@ -33,7 +33,7 @@ export default {
 		"no-caller": "error",
 		"no-console": "off",
 		"no-debugger": "warn",
-		"no-else-return": "error",
+		"no-else-return": "warn",
 		"no-extend-native": "error",
 		"no-extra-bind": "error",
 		"no-iterator": "error",
@@ -44,7 +44,7 @@ export default {
 		"no-new-func": "error",
 		"no-new-object": "error",
 		"no-new-wrappers": "error",
-		"no-undef-init": "error",
+		"no-undef-init": "warn",
 		"no-underscore-dangle": ["warn", {
 			"allowAfterThis": true
 		}],
