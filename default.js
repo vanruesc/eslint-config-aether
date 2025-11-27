@@ -34,6 +34,7 @@ export default {
 		"no-console": "off",
 		"no-debugger": "warn",
 		"no-else-return": "warn",
+		"no-empty": "warn",
 		"no-extend-native": "error",
 		"no-extra-bind": "error",
 		"no-iterator": "error",

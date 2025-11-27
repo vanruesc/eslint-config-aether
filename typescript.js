@@ -22,11 +22,13 @@ export default {
 		"no-unused-vars": "off",
 		"@typescript-eslint/dot-notation": "warn",
 		"@typescript-eslint/no-empty-function": "off",
+		"@typescript-eslint/no-unnecessary-type-assertion": "warn",
 		"@typescript-eslint/no-unused-vars": ["warn", {
 			"vars": "all",
 			"args": "none",
 			"caughtErrors": "none"
 		}],
+		"@typescript-eslint/prefer-nullish-coalescing": "warn",
 		"@typescript-eslint/prefer-optional-chain": "off",
 		"@typescript-eslint/strict-boolean-expressions": "error",
 		"@typescript-eslint/naming-convention": ["warn",
