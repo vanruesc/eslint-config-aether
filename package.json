@@ -3,13 +3,13 @@
 	"version": "2.0.3",
 	"description": "A custom code style for ESLint.",
 	"homepage": "https://github.com/vanruesc/eslint-config-aether",
-	"main": "./index.js",
+	"main": "./dist/index.js",
 	"license": "Zlib",
 	"type": "module",
 	"exports": {
 		".": {
-			"types": "./index.d.ts",
-			"default": "./index.js"
+			"types": "./dist/index.d.ts",
+			"default": "./dist/index.js"
 		}
 	},
 	"keywords": [
@@ -34,30 +34,39 @@
 		"url": "https://github.com/vanruesc/eslint-config-aether/issues"
 	},
 	"files": [
-		"default.js",
-		"index.js",
-		"index.d.ts",
-		"typescript.js"
+		"dist"
 	],
+	"pnpm": {
+		"onlyBuiltDependencies": [
+			"esbuild"
+		]
+	},
 	"scripts": {
-		"debug:js": "eslint --debug -c index.js test/test.js",
-		"debug:ts": "eslint --debug -c index.js test/test.ts",
-		"test": "run-p test:*",
-		"test:js": "eslint -c index.js test/test.js",
-		"test:ts": "eslint -c index.js test/test.ts",
+		"prebuild": "npm run clean",
+		"build": "run-p build:*",
+		"build:js": "node esbuild",
+		"build:dts": "tsc -p tsconfig.d.json",
+		"clean": "del-cli dist",
+		"debug": "eslint --debug test",
+		"pretest": "npm run build",
+		"test": "eslint test",
 		"prepublishOnly": "npm test"
 	},
 	"peerDependencies": {
 		"eslint": "9.x.x"
 	},
 	"dependencies": {
+		"@eslint/core": "1.x.x",
 		"@eslint/js": "9.x.x",
-		"@typescript-eslint/eslint-plugin": "8.x.x",
-		"@typescript-eslint/parser": "8.x.x",
 		"@stylistic/eslint-plugin": "5.x.x",
-		"globals": "16.x.x"
+		"typescript-eslint": "8.x.x",
+		"globals": "17.x.x"
 	},
 	"devDependencies": {
-		"npm-run-all": "4.x.x"
+		"del-cli": "7.x.x",
+		"esbuild": "0.27.x",
+		"npm-run-all": "4.x.x",
+		"tslib": "2.x.x",
+		"typescript": "5.9.x"
 	}
 }

@@ -1,11 +1,20 @@
 {
-	"include": ["./test"],
+	"include": ["./src", "./test"],
 	"compilerOptions": {
+		// File Layout
 		"baseUrl": ".",
-		"moduleResolution": "node",
-		"module": "esnext",
-		"target": "esnext",
+		"outDir": "./dist",
+		// Environment Settings
+		"moduleResolution": "bundler",
+		"module": "es2022",
+		"target": "es2022",
+		// Other
+		"allowSyntheticDefaultImports": true,
+		"noUncheckedSideEffectImports": true,
+		"resolveJsonModule": true,
 		"strict": true,
-		"allowJs": true
+		"sourceMap": false,
+		"skipLibCheck": true,
+		"checkJs": true
 	}
 }
