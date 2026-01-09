@@ -1,26 +1,28 @@
+import { ConfigObject, Plugin } from "@eslint/core";
 import js from "@eslint/js";
-import globals from "globals";
 import stylistic from "@stylistic/eslint-plugin";
+import globals from "globals";
 
 export default {
-	"files": [
+	files: [
 		"**/*.js",
-		"**/*.ts",
+		"**/*.ts"
 	],
-	"plugins": {
-		"@stylistic": stylistic,
+	plugins: {
+		"@stylistic": stylistic as Plugin,
+		js
 	},
-	"languageOptions": {
-		"globals": {
+	languageOptions: {
+		globals: {
 			...globals.browser,
-			...globals.es2025,
+			...globals.es2026,
 			...globals.jquery,
 			...globals.node,
 			...globals.worker
 		}
 	},
-	"rules": {
-		...js.configs.recommended.rules,
+	extends: ["js/recommended"],
+	rules: {
 		"camelcase": "off",
 		"consistent-return": "error",
 		"curly": "warn",
@@ -110,4 +112,4 @@ export default {
 		"@stylistic/space-unary-ops": "warn",
 		"@stylistic/spaced-comment": ["warn", "always"]
 	}
-};
+} as ConfigObject;

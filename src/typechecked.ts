@@ -1,36 +1,30 @@
-import tsParser from "@typescript-eslint/parser";
-import ts from "@typescript-eslint/eslint-plugin";
+import { ConfigObject } from "@eslint/core";
+import ts from "typescript-eslint";
 
 export default {
-	"files": [
+	files: [
 		"**/*.ts",
+		"**/*.js"
 	],
-	"plugins": {
-		"@typescript-eslint": ts
+	plugins: {
+		"@typescript-eslint": ts.plugin
 	},
-	"languageOptions": {
-		"parser": tsParser,
-		"parserOptions": {
-			"project": ["tsconfig.json"]
+	languageOptions: {
+		parser: ts.parser,
+		parserOptions: {
+			project: ["tsconfig.json"]
 		}
 	},
-	"rules": {
-		...ts.configs["recommended-requiring-type-checking"].rules,
-		...ts.configs["stylistic-type-checked"].rules,
+	extends: [
+		ts.configs.recommendedTypeChecked,
+		ts.configs.stylisticTypeChecked
+	],
+	rules: {
 		"no-undef": "off",
 		"no-underscore-dangle": "off",
 		"no-unused-vars": "off",
+		"@typescript-eslint/class-literal-property-style": "warn",
 		"@typescript-eslint/dot-notation": "warn",
-		"@typescript-eslint/no-empty-function": "off",
-		"@typescript-eslint/no-unnecessary-type-assertion": "warn",
-		"@typescript-eslint/no-unused-vars": ["warn", {
-			"vars": "all",
-			"args": "none",
-			"caughtErrors": "none"
-		}],
-		"@typescript-eslint/prefer-nullish-coalescing": "warn",
-		"@typescript-eslint/prefer-optional-chain": "off",
-		"@typescript-eslint/strict-boolean-expressions": "error",
 		"@typescript-eslint/naming-convention": ["warn",
 			{
 				"selector": "default",
@@ -75,6 +69,25 @@ export default {
 					"match": false
 				}
 			}
-		]
+		],
+		"@typescript-eslint/no-empty-function": "off",
+		"@typescript-eslint/no-floating-promises": ["error", {
+			"allowForKnownSafeCalls": [
+				{
+					"from": "package",
+					"package": "node:test",
+					"name": ["suite", "test"]
+				}
+			]
+		}],
+		"@typescript-eslint/no-unnecessary-type-assertion": "warn",
+		"@typescript-eslint/no-unused-vars": ["warn", {
+			"vars": "all",
+			"args": "none",
+			"caughtErrors": "none"
+		}],
+		"@typescript-eslint/prefer-nullish-coalescing": "warn",
+		"@typescript-eslint/prefer-optional-chain": "off",
+		"@typescript-eslint/strict-boolean-expressions": "error"
 	}
-};
+} as ConfigObject;
