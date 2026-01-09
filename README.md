@@ -40,6 +40,25 @@ npm install eslint-config-aether
 #### eslint.config.js
 
 ```js
-import aether from "eslint-config-aether";
-export default [...aether];
+// Minimal config
+import aether from "eslint-plugin-aether";
+export default aether;
+```
+
+```js
+// Custom config
+import { defineConfig } from "eslint/config";
+import aether from "eslint-plugin-aether";
+
+export default defineConfig([
+	{
+		files: ["**/*.js", "**/*.ts"],
+		extends: [aether],
+
+		// anything from here will override the base config
+		rules: {
+			"@stylistic/padded-blocks": "off"
+		}
+	}
+]);
 ```
