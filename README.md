@@ -41,14 +41,14 @@ npm install eslint-config-aether
 
 ```js
 // Minimal config
-import aether from "eslint-plugin-aether";
+import aether from "eslint-config-aether";
 export default aether;
 ```
 
 ```js
 // Custom config
 import { defineConfig } from "eslint/config";
-import aether from "eslint-plugin-aether";
+import aether from "eslint-config-aether";
 
 export default defineConfig([
 	{
