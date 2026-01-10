@@ -1,20 +1,25 @@
-const btn = document.getElementById("btn");
-let count = 0;
+import { describe, it } from "node:test";
+import assert from "node:assert/strict";
+import { readFile } from "fs/promises";
 
-function render() {
+describe("Aether Config", () => {
 
-	btn.innerText = `Count: ${count}`;
+	it("produces the expected result when linting JavaScript files", async() => {
 
-}
+		const actual = await readFile("test/generated/test.js", "utf8");
+		const expected = await readFile("test/expected/test.js", "utf8");
 
-btn.addEventListener("click", () => {
+		assert.equal(actual, expected);
 
-	// Count from 1 to 10.
-	if(count < 10) {
+	});
 
-		count += 1;
-		render();
+	it("produces the expected result when linting TypeScript files", async() => {
 
-	}
+		const actual = await readFile("test/generated/test.ts", "utf8");
+		const expected = await readFile("test/expected/test.ts", "utf8");
+
+		assert.equal(actual, expected);
+
+	});
 
 });
