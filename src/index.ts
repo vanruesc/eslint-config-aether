@@ -1,5 +1,4 @@
 import { defineConfig } from "eslint/config";
-import ts from "typescript-eslint";
 
 import baseConfig from "./base.js";
 import typeCheckedConfig from "./typechecked.js";
@@ -14,14 +13,8 @@ const eslintignore = {
 	]
 };
 
-const jsDisableTypeChecked = {
-	files: ["**/*.js"],
-	extends: [ts.configs.disableTypeChecked]
-};
-
 export default defineConfig([
 	eslintignore,
 	baseConfig,
-	typeCheckedConfig,
-	jsDisableTypeChecked
+	typeCheckedConfig
 ]);

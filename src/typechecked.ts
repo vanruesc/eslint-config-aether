@@ -3,8 +3,7 @@ import ts from "typescript-eslint";
 
 export default {
 	files: [
-		"**/*.ts",
-		"**/*.js"
+		"**/*.ts"
 	],
 	plugins: {
 		"@typescript-eslint": ts.plugin
@@ -16,8 +15,8 @@ export default {
 		}
 	},
 	extends: [
-		ts.configs.recommendedTypeChecked,
-		ts.configs.stylisticTypeChecked
+		"@typescript-eslint/recommended-type-checked",
+		"@typescript-eslint/stylistic-type-checked"
 	],
 	rules: {
 		"no-undef": "off",

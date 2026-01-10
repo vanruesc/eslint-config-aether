@@ -21,19 +21,21 @@ export default {
 			...globals.worker
 		}
 	},
-	extends: ["js/recommended"],
+	extends: [
+		"js/recommended"
+	],
 	rules: {
 		"camelcase": "off",
 		"consistent-return": "error",
 		"curly": "warn",
 		"dot-notation": "warn",
 		"eqeqeq": "error",
-		"indent": "off",
 		"new-cap": "error",
 		"no-array-constructor": "error",
 		"no-alert": "warn",
 		"no-caller": "error",
 		"no-console": "off",
+		"no-constant-condition": "warn",
 		"no-debugger": "warn",
 		"no-else-return": "warn",
 		"no-empty": "warn",
@@ -45,7 +47,7 @@ export default {
 		"no-loop-func": "warn",
 		"no-new": "error",
 		"no-new-func": "error",
-		"no-new-object": "error",
+		"no-object-constructor": "error",
 		"no-new-wrappers": "error",
 		"no-undef-init": "warn",
 		"no-underscore-dangle": ["warn", {
@@ -57,7 +59,6 @@ export default {
 			"caughtErrors": "none"
 		}],
 		"no-var": "error",
-		"wrap-iife": "warn",
 		"yoda": ["warn", "never"],
 		"@stylistic/array-bracket-spacing": ["warn", "never"],
 		"@stylistic/block-spacing": ["warn", "always"],
@@ -110,6 +111,7 @@ export default {
 		"@stylistic/space-in-parens": ["warn", "never"],
 		"@stylistic/space-infix-ops": "warn",
 		"@stylistic/space-unary-ops": "warn",
-		"@stylistic/spaced-comment": ["warn", "always"]
+		"@stylistic/spaced-comment": ["warn", "always"],
+		"@stylistic/wrap-iife": "warn"
 	}
 } as ConfigObject;
