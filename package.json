@@ -53,7 +53,7 @@
 		"fix": "eslint --fix test/generated",
 		"report": "eslint src --format html --output-file eslintreport.html",
 		"pretest": "run-s build copy fix",
-		"test": "node test/test.js",
+		"test": "node --import tsx test/test.ts",
 		"prepublishOnly": "npm test"
 	},
 	"peerDependencies": {
@@ -73,6 +73,7 @@
 		"native-copyfiles": "1.x.x",
 		"npm-run-all": "4.x.x",
 		"tslib": "2.x.x",
+		"tsx": "4.x.x",
 		"typescript": "5.9.x"
 	}
 }
