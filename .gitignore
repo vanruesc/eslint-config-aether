@@ -32,6 +32,8 @@ package-lock.json
 
 # Generated files
 dist
-public
+temp
+generated
 *.log
 *.tmp
+eslintreport.html
