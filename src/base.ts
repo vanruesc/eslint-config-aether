@@ -59,6 +59,7 @@ export default {
 			"caughtErrors": "none"
 		}],
 		"no-var": "error",
+		"prefer-const": "warn",
 		"yoda": ["warn", "never"],
 		"@stylistic/array-bracket-spacing": ["warn", "never"],
 		"@stylistic/block-spacing": ["warn", "always"],
