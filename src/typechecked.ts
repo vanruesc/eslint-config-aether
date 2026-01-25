@@ -22,6 +22,7 @@ export default {
 		"no-undef": "off",
 		"no-underscore-dangle": "off",
 		"no-unused-vars": "off",
+		"prefer-const": "warn",
 		"@typescript-eslint/class-literal-property-style": "warn",
 		"@typescript-eslint/dot-notation": "warn",
 		"@typescript-eslint/naming-convention": ["warn",
