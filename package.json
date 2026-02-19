@@ -57,11 +57,11 @@
 		"prepublishOnly": "npm test"
 	},
 	"peerDependencies": {
-		"eslint": "9.x.x"
+		"eslint": ">= 9.x.x < 11.x.x"
 	},
 	"dependencies": {
 		"@eslint/core": "1.x.x",
-		"@eslint/js": "9.x.x",
+		"@eslint/js": "10.x.x",
 		"@stylistic/eslint-plugin": "5.x.x",
 		"typescript-eslint": "8.x.x",
 		"globals": "17.x.x"
@@ -70,7 +70,7 @@
 		"@types/node": "25.x.x",
 		"del-cli": "7.x.x",
 		"esbuild": "0.27.x",
-		"native-copyfiles": "1.x.x",
+		"native-copyfiles": "2.x.x",
 		"npm-run-all": "4.x.x",
 		"tslib": "2.x.x",
 		"tsx": "4.x.x",
