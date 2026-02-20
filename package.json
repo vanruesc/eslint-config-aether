@@ -57,11 +57,11 @@
 		"prepublishOnly": "npm test"
 	},
 	"peerDependencies": {
-		"eslint": "9.x.x"
+		"eslint": "10.x.x"
 	},
 	"dependencies": {
 		"@eslint/core": "1.x.x",
-		"@eslint/js": "9.x.x",
+		"@eslint/js": "10.x.x",
 		"@stylistic/eslint-plugin": "5.x.x",
 		"typescript-eslint": "8.x.x",
 		"globals": "17.x.x"
