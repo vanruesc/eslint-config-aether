@@ -94,6 +94,7 @@ export default {
 			"tabWidth": 2,
 			"ignoreComments": true
 		}],
+		"@stylistic/member-delimiter-style": ["error"],
 		"@stylistic/new-parens": "error",
 		"@stylistic/no-extra-semi": "warn",
 		"@stylistic/no-mixed-spaces-and-tabs": "warn",
