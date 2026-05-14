@@ -69,7 +69,7 @@
 	"devDependencies": {
 		"@types/node": "25.x.x",
 		"del-cli": "7.x.x",
-		"esbuild": "0.27.x",
+		"esbuild": "0.28.x",
 		"native-copyfiles": "2.x.x",
 		"npm-run-all": "4.x.x",
 		"tslib": "2.x.x",
