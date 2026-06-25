@@ -41,8 +41,7 @@ npm install eslint-config-aether
 
 ```js
 // Minimal config
-import aether from "eslint-config-aether";
-export default aether;
+import { default } from "eslint-config-aether";
 ```
 
 ```js
