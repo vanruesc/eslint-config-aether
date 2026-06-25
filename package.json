@@ -36,11 +36,6 @@
 	"files": [
 		"dist"
 	],
-	"pnpm": {
-		"onlyBuiltDependencies": [
-			"esbuild"
-		]
-	},
 	"scripts": {
 		"prebuild": "npm run clean",
 		"build": "run-p build:*",
