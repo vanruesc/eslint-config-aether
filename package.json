@@ -63,8 +63,8 @@
 		"@eslint/core": "1.x.x",
 		"@eslint/js": "10.x.x",
 		"@stylistic/eslint-plugin": "5.x.x",
-		"typescript-eslint": "8.x.x",
-		"globals": "17.x.x"
+		"globals": "17.x.x",
+		"typescript-eslint": "8.x.x"
 	},
 	"devDependencies": {
 		"@types/node": "26.x.x",
