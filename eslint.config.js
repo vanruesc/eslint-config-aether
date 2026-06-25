@@ -1,2 +1,1 @@
-import aether from "./dist/index.js";
-export default aether;
+export { default } from "./dist/index.js";
