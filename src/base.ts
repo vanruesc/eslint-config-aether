@@ -1,4 +1,4 @@
-import { ConfigObject, Plugin } from "@eslint/core";
+import { ConfigObject } from "@eslint/core";
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
 import globals from "globals";
@@ -9,7 +9,7 @@ export default {
 		"**/*.ts"
 	],
 	plugins: {
-		"@stylistic": stylistic as Plugin,
+		"@stylistic": stylistic,
 		js
 	},
 	languageOptions: {
@@ -98,7 +98,9 @@ export default {
 		"@stylistic/new-parens": "error",
 		"@stylistic/no-extra-semi": "warn",
 		"@stylistic/no-mixed-spaces-and-tabs": "warn",
-		"@stylistic/no-multiple-empty-lines": "warn",
+		"@stylistic/no-multiple-empty-lines": ["warn", {
+			"max": 1
+		}],
 		"@stylistic/no-multi-spaces": "warn",
 		"@stylistic/no-trailing-spaces": "warn",
 		"@stylistic/no-whitespace-before-property": "warn",
