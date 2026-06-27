@@ -37,7 +37,6 @@
 		"dist"
 	],
 	"scripts": {
-		"prebuild": "npm run clean",
 		"build": "run-p build:*",
 		"build:js": "node esbuild",
 		"build:dts": "tsc -p tsconfig.d.json",
@@ -47,7 +46,7 @@
 		"debug": "eslint --debug src",
 		"fix": "eslint --fix test/generated",
 		"report": "eslint src --format html --output-file eslintreport.html",
-		"pretest": "run-s build copy fix",
+		"pretest": "run-s clean build copy fix",
 		"test": "node --import tsx test/test.ts",
 		"prepublishOnly": "npm test"
 	},
