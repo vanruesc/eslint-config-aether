@@ -37,18 +37,17 @@
 		"dist"
 	],
 	"scripts": {
-		"build": "run-p build:*",
-		"build:js": "node esbuild",
-		"build:dts": "tsc -p tsconfig.d.json",
+		"build": "node esbuild",
 		"clean": "del-cli dist test/generated",
+		"dts": "tsc -p tsconfig.d.json",
 		"copy": "copyfiles \"test/src/**\" test/generated -u 2",
-		"predebug": "npm run build:js",
+		"predebug": "run-s clean dts build",
 		"debug": "eslint --debug src",
 		"fix": "eslint --fix test/generated",
 		"report": "eslint src --format html --output-file eslintreport.html",
-		"pretest": "run-s clean build copy fix",
+		"pretest": "run-s clean dts build copy fix",
 		"test": "node --import tsx test/test.ts",
-		"prepublishOnly": "npm test"
+		"prepublishOnly": "run-s test"
 	},
 	"peerDependencies": {
 		"eslint": "10.x.x"
