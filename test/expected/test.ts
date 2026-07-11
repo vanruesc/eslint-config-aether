@@ -1,6 +1,9 @@
 const btn = document.getElementById("btn")!;
 let count = 0;
 
+const o = { value: undefined as HTMLElement | undefined };
+const foo = <T>(arg: T) => o.value !== undefined ? 1 : 0;
+
 function render(): void {
 
 	btn.innerText = `Count: ${count}`;
@@ -16,6 +19,8 @@ btn.addEventListener("click", () => {
 		render();
 
 	}
+
+	void foo(0);
 
 });
 

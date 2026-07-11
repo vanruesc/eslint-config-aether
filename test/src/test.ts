@@ -1,12 +1,15 @@
 let btn = document.getElementById('btn') !;
 var count = 0 ;
 
+const o = { value: undefined as HTMLElement | undefined };
+const foo = <  T >(arg: T) => o.value !== undefined ? 1 : 0;
+
 function render (): void {
 
 		btn["innerText"] = `Count: ${count}`;
 	}
 
-btn!.addEventListener(`click`, () => {
+btn! .addEventListener(`click`, () => {
 
 	//Count from 1 to 10.
 	if(count < 10) {
@@ -15,6 +18,8 @@ btn!.addEventListener(`click`, () => {
 		render()
 
 	}
+
+		void foo (0);
 
 });
 
