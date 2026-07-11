@@ -116,6 +116,7 @@ export default {
 		"@stylistic/space-infix-ops": "warn",
 		"@stylistic/space-unary-ops": "warn",
 		"@stylistic/spaced-comment": ["warn", "always"],
+		"@stylistic/type-generic-spacing": "warn",
 		"@stylistic/wrap-iife": "warn"
 	}
 } as ConfigObject;
