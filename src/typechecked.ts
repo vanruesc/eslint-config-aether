@@ -88,6 +88,8 @@ export default {
 		}],
 		"@typescript-eslint/prefer-nullish-coalescing": "warn",
 		"@typescript-eslint/prefer-optional-chain": "off",
-		"@typescript-eslint/strict-boolean-expressions": "error"
+		"@typescript-eslint/strict-boolean-expressions": ["error", {
+			"allowNullableObject": false
+		}]
 	}
 } as ConfigObject;
