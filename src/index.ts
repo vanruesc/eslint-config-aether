@@ -8,9 +8,8 @@ const eslintignore = {
 		"**/build/**",
 		"**/dist/**",
 		"**/vendor/**",
-		"**/generated/**",
-		"**/temp/**"
-		"**/tmp/**"
+		"**/lib/**",
+		"**/libs/**"
 	]
 };
 
