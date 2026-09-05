@@ -11,7 +11,7 @@ export default {
 	languageOptions: {
 		parser: ts.parser,
 		parserOptions: {
-			project: ["tsconfig.json"]
+			projectService: true
 		}
 	},
 	extends: [
