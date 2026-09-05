@@ -39,13 +39,13 @@
 	"scripts": {
 		"build": "node esbuild",
 		"clean": "del-cli dist test/generated",
-		"dts": "tsc -p tsconfig.d.json",
+		"tsc": "tsc -p tsconfig.d.json",
 		"copy": "copyfiles \"test/src/**\" test/generated -u 2",
-		"predebug": "run-s clean dts build",
+		"predebug": "run-s clean tsc build",
 		"debug": "eslint --debug src",
 		"fix": "eslint --fix test/generated",
 		"report": "eslint src --format html --output-file eslintreport.html",
-		"pretest": "run-s clean dts build copy fix",
+		"pretest": "run-s clean tsc build copy fix",
 		"test": "node --import tsx test/test.ts",
 		"prepublishOnly": "run-s test"
 	},
