@@ -1,3 +1,5 @@
 save: false
+gitChecks: false
+
 allowBuilds:
   'esbuild': true

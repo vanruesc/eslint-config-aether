@@ -8,7 +8,7 @@ on:
 
 permissions:
   id-token: write
-  contents: write
+  contents: read
 
 jobs:
   deploy:
@@ -22,10 +22,5 @@ jobs:
           version: 11
           runtime: node@24
           cache: true
-      - name: Test
-        run: pnpm test
-      - name: Publish
-        uses: JS-DevTools/npm-publish@v4
-        with:
-          provenance: true
-          ignore-scripts: true
+      - name: Test and publish
+        run: pnpm publish --provenance
