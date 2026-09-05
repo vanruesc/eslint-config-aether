@@ -88,7 +88,6 @@ export default {
 		"@stylistic/lines-between-class-members": ["warn", "always", {
 			"exceptAfterSingleLine": true
 		}],
-		"@stylistic/object-curly-spacing": ["warn", "always"],
 		"@stylistic/max-len": ["warn", {
 			"code": 120,
 			"tabWidth": 2,
@@ -104,6 +103,7 @@ export default {
 		"@stylistic/no-multi-spaces": "warn",
 		"@stylistic/no-trailing-spaces": "warn",
 		"@stylistic/no-whitespace-before-property": "warn",
+		"@stylistic/object-curly-spacing": ["warn", "always"],
 		"@stylistic/padded-blocks": ["warn", "always", {
 			"allowSingleLineBlocks": true
 		}],

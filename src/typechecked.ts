@@ -35,6 +35,10 @@ export default {
 				"format": ["camelCase", "PascalCase"]
 			},
 			{
+				"selector": "typeLike",
+				"format": ["PascalCase"]
+			},
+			{
 				"selector": ["variable", "accessor"],
 				"format": ["camelCase", "UPPER_CASE"]
 			},
@@ -48,10 +52,6 @@ export default {
 				"modifiers": ["static", "readonly"],
 				"format": ["camelCase", "PascalCase", "UPPER_CASE"],
 				"leadingUnderscore": "forbid"
-			},
-			{
-				"selector": "typeLike",
-				"format": ["PascalCase"]
 			},
 			{
 				"selector": "enumMember",
