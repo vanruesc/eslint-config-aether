@@ -5,10 +5,7 @@ import typeCheckedConfig from "./typechecked.js";
 const eslintignore = {
 	ignores: [
 		"**/build/**",
-		"**/dist/**",
-		"**/vendor/**",
-		"**/lib/**",
-		"**/libs/**"
+		"**/dist/**"
 	]
 };
 
