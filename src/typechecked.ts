@@ -60,14 +60,6 @@ export default {
 			{
 				"selector": ["objectLiteralProperty", "objectLiteralMethod"],
 				"format": null
-			},
-			{
-				"selector": "interface",
-				"format": ["PascalCase"],
-				"custom": {
-					"regex": "^I[A-Z]",
-					"match": false
-				}
 			}
 		],
 		"@typescript-eslint/no-empty-function": "off",
