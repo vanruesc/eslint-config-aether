@@ -15,10 +15,8 @@ export default {
 	languageOptions: {
 		globals: {
 			...globals.browser,
-			...globals.es2026,
 			...globals.jquery,
-			...globals.node,
-			...globals.worker
+			...globals.node
 		}
 	},
 	extends: [
