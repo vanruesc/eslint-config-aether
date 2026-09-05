@@ -2,7 +2,21 @@
 
 [![npm version](https://badgen.net/npm/v/eslint-config-aether?color=green)](https://www.npmjs.com/package/eslint-config-aether)
 
-A custom code style for [ESLint](https://eslint.org/).
+An opinionated code style for [ESLint](https://eslint.org/) that provides type-aware linting, formatting, common runtime globals, and sensible defaults out of the box.
+
+## Installation
+
+```sh
+npm install eslint-config-aether
+``` 
+
+## Usage
+
+#### eslint.config.js
+
+```js
+import { default } from "eslint-config-aether";
+```
 
 ## Preview
 
@@ -29,23 +43,9 @@ btn.addEventListener("click", () => {
 });
 ```
 
-## Installation
-
-```sh
-npm install eslint-config-aether
-``` 
-
-## Usage
-
-#### eslint.config.js
+## Customization
 
 ```js
-// Minimal config
-import { default } from "eslint-config-aether";
-```
-
-```js
-// Custom config
 import { defineConfig } from "eslint/config";
 import aether from "eslint-config-aether";
 
