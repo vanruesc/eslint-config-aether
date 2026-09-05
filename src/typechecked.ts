@@ -86,6 +86,7 @@ export default {
 			"args": "none",
 			"caughtErrors": "none"
 		}],
+		"@typescript-eslint/prefer-for-of": "off",
 		"@typescript-eslint/prefer-nullish-coalescing": "warn",
 		"@typescript-eslint/prefer-optional-chain": "off",
 		"@typescript-eslint/strict-boolean-expressions": ["error", {
