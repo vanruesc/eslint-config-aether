@@ -63,6 +63,7 @@ export default {
 			"args": "none",
 			"caughtErrors": "none"
 		}],
+		"no-useless-assignment": "warn",
 		"no-var": "error",
 		"prefer-const": "warn",
 		"yoda": ["warn", "never"],
