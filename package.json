@@ -2,15 +2,17 @@
 	"name": "eslint-config-aether",
 	"version": "3.2.3",
 	"description": "A custom code style for ESLint.",
-	"homepage": "https://github.com/vanruesc/eslint-config-aether",
-	"main": "./dist/index.js",
 	"license": "Zlib",
-	"type": "module",
-	"exports": {
-		".": {
-			"types": "./dist/types/index.d.ts",
-			"default": "./dist/index.js"
-		}
+	"author": {
+		"name": "Raoul van Rüschen",
+		"email": "vanruesc@outlook.de"
+	},
+	"homepage": "https://github.com/vanruesc/eslint-config-aether",
+	"repository": {
+		"url": "git+https://github.com/vanruesc/eslint-config-aether.git"
+	},
+	"bugs": {
+		"url": "https://github.com/vanruesc/eslint-config-aether/issues"
 	},
 	"keywords": [
 		"eslint",
@@ -23,31 +25,26 @@
 		"typescript",
 		"ts"
 	],
-	"author": {
-		"name": "Raoul van Rüschen",
-		"email": "vanruesc@outlook.de"
-	},
-	"repository": {
-		"url": "git+https://github.com/vanruesc/eslint-config-aether.git"
-	},
-	"bugs": {
-		"url": "https://github.com/vanruesc/eslint-config-aether/issues"
+	"type": "module",
+	"main": "./dist/index.js",
+	"exports": {
+		".": {
+			"types": "./dist/types/index.d.ts",
+			"default": "./dist/index.js"
+		}
 	},
 	"files": [
 		"dist"
 	],
-	"scripts": {
-		"build": "node esbuild",
-		"clean": "del-cli dist test/generated",
-		"tsc": "tsc -p tsconfig.d.json",
-		"copy": "copyfiles \"test/src/**\" test/generated -u 2",
-		"predebug": "run-s clean tsc build",
-		"debug": "eslint --debug src",
-		"fix": "eslint --fix test/generated",
-		"report": "eslint src --format html --output-file eslintreport.html",
-		"pretest": "run-s clean tsc build copy fix",
-		"test": "node --import tsx test/test.ts",
-		"prepublishOnly": "run-s test"
+	"engines": {
+		"node": ">= 22.22.2"
+	},
+	"devEngines": {
+		"packageManager": {
+			"name": "pnpm",
+			"version": ">=12 <13",
+			"onFail": "error"
+		}
 	},
 	"peerDependencies": {
 		"eslint": "10.x.x"
@@ -56,6 +53,7 @@
 		"@eslint/core": "1.x.x",
 		"@eslint/js": "10.x.x",
 		"@stylistic/eslint-plugin": "5.x.x",
+		"eslint-plugin-jsdoc": "65.x.x",
 		"globals": "17.x.x",
 		"typescript-eslint": "8.x.x"
 	},
@@ -68,5 +66,18 @@
 		"tslib": "2.x.x",
 		"tsx": "4.x.x",
 		"typescript": "6.0.x"
+	},
+	"scripts": {
+		"build": "node esbuild",
+		"clean": "del-cli dist test/generated",
+		"tsc": "tsc -p tsconfig.d.json",
+		"copy": "copyfiles \"test/src/**\" test/generated -u 2",
+		"predebug": "run-s clean tsc build",
+		"debug": "eslint --debug src",
+		"fix": "eslint --fix test/generated",
+		"report": "eslint src --format html --output-file eslintreport.html",
+		"pretest": "run-s clean tsc build copy fix",
+		"test": "node --import tsx test/test.ts",
+		"prepublishOnly": "run-s test"
 	}
 }
