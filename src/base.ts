@@ -1,6 +1,7 @@
 import { ConfigObject } from "@eslint/core";
 import js from "@eslint/js";
 import stylistic from "@stylistic/eslint-plugin";
+import jsdoc from "eslint-plugin-jsdoc";
 import globals from "globals";
 
 export default {
@@ -10,7 +11,13 @@ export default {
 	],
 	plugins: {
 		"@stylistic": stylistic,
-		js
+		js,
+		jsdoc
+	},
+	settings: {
+		jsdoc: {
+			maxLines: 2
+		}
 	},
 	languageOptions: {
 		globals: {
@@ -73,6 +80,7 @@ export default {
 		"@stylistic/indent": ["warn", "tab", {
 			"SwitchCase": 1
 		}],
+		"@stylistic/indent-binary-ops": ["warn", "tab"],
 		"@stylistic/key-spacing": "warn",
 		"@stylistic/keyword-spacing": ["warn", {
 			"overrides": {
@@ -85,6 +93,10 @@ export default {
 		}],
 		"@stylistic/lines-between-class-members": ["warn", "always", {
 			"exceptAfterSingleLine": true
+		}],
+		"@stylistic/lines-around-comment": ["warn", {
+			"beforeBlockComment": true,
+			"afterBlockComment": true
 		}],
 		"@stylistic/max-len": ["warn", {
 			"code": 120,
@@ -113,8 +125,16 @@ export default {
 		"@stylistic/space-in-parens": ["warn", "never"],
 		"@stylistic/space-infix-ops": "warn",
 		"@stylistic/space-unary-ops": "warn",
-		"@stylistic/spaced-comment": ["warn", "always"],
+		"@stylistic/spaced-comment": ["warn", "always", {
+			"block": { "balanced": true }
+		}],
 		"@stylistic/type-generic-spacing": "warn",
-		"@stylistic/wrap-iife": "warn"
+		"@stylistic/wrap-iife": "warn",
+		"jsdoc/check-alignment": "warn",
+		"jsdoc/check-line-alignment": ["warn", "always"],
+		"jsdoc/require-jsdoc": "off",
+		"jsdoc/tag-lines": ["warn", "any", {
+			"startLines": 1
+		}]
 	}
 } as ConfigObject;
