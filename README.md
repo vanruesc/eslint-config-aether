@@ -15,7 +15,7 @@ npm install eslint-config-aether
 #### eslint.config.js
 
 ```js
-import { default } from "eslint-config-aether";
+export { default } from "eslint-config-aether";
 ```
 
 ## Preview
