@@ -1,6 +1,6 @@
 {
 	"name": "eslint-config-aether",
-	"version": "3.2.3",
+	"version": "3.3.0",
 	"description": "A custom code style for ESLint.",
 	"license": "Zlib",
 	"author": {
