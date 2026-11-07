@@ -3,17 +3,12 @@
 	"version": "3.3.0",
 	"description": "A custom code style for ESLint.",
 	"license": "Zlib",
-	"author": {
-		"name": "Raoul van Rüschen",
-		"email": "vanruesc@outlook.de"
-	},
+	"author": "Raoul van Rüschen <vanruesc@outlook.de>",
 	"homepage": "https://github.com/vanruesc/eslint-config-aether",
 	"repository": {
 		"url": "git+https://github.com/vanruesc/eslint-config-aether.git"
 	},
-	"bugs": {
-		"url": "https://github.com/vanruesc/eslint-config-aether/issues"
-	},
+	"bugs": "https://github.com/vanruesc/eslint-config-aether/issues",
 	"keywords": [
 		"eslint",
 		"eslintconfig",
@@ -27,6 +22,7 @@
 	],
 	"type": "module",
 	"main": "./dist/index.js",
+	"types": "./dist/types/index.d.ts",
 	"exports": {
 		".": {
 			"types": "./dist/types/index.d.ts",
