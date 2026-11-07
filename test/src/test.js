@@ -1,14 +1,16 @@
 const btn = document.getElementById('btn');
 var count = 0 ;
+/* block comment*/
 
 const o = { value: undefined };
 const foo = (arg) => o.value ? 1 : 0;
 
 /**
-*doc comment
-*@param {number} timestamp - a timestamp
+* doc comment
+* @param {number} timestamp - a timestamp
+* @param {unknown} test - test
 */
-function render (timestamp) {
+function render (timestamp, test) {
 
 		btn["innerText"] = `Count: ${count}`;
 	}

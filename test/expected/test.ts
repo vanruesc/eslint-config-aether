@@ -1,6 +1,8 @@
 const btn = document.getElementById("btn")!;
 let count = 0;
 
+/* block comment */
+
 const o = { value: undefined as HTMLElement | undefined };
 const foo = <T>(arg: T) => o.value !== undefined ? 1 : 0;
 
@@ -8,9 +10,9 @@ const foo = <T>(arg: T) => o.value !== undefined ? 1 : 0;
  * doc comment
  *
  * @param timestamp - a timestamp
+ * @param test - test
  */
-
-function render(timestamp: number): void {
+function render(timestamp: number, test?: unknown): void {
 
 	btn.innerText = `Count: ${count}`;
 
