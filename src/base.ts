@@ -132,7 +132,6 @@ export default {
 		"@stylistic/type-generic-spacing": "warn",
 		"@stylistic/wrap-iife": "warn",
 		"jsdoc/check-alignment": "warn",
-		"jsdoc/check-line-alignment": ["warn", "always"],
 		"jsdoc/require-jsdoc": "off",
 		"jsdoc/tag-lines": ["warn", "any", {
 			"startLines": 1
