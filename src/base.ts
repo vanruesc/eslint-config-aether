@@ -95,10 +95,7 @@ export default {
 		"@stylistic/lines-between-class-members": ["warn", "always", {
 			"exceptAfterSingleLine": true
 		}],
-		"@stylistic/lines-around-comment": ["warn", {
-			"beforeBlockComment": true,
-			"afterBlockComment": true
-		}],
+		"@stylistic/lines-around-comment": "warn",
 		"@stylistic/max-len": ["warn", {
 			"code": 120,
 			"tabWidth": 2,
